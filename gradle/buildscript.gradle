@@ -5,8 +5,16 @@ repositories {
         url 'https://github.com/Netflix-Skunkworks/build-repo/raw/master/releases/'
     }
 }
+
+// newbay stuff
+repositories.mavenRepo url: 'http://maven.newbay.com:8081/content/repositories/newbay-snapshots'
+repositories.mavenRepo url: 'http://maven.newbay.com/repos/releases'
+
 dependencies {
     classpath 'nl.javadude.gradle.plugins:license-gradle-plugin:0.6.0'
     classpath 'com.mapvine:gradle-cobertura-plugin:0.1'
     classpath 'gradle-release:gradle-release:1.0-SNAPSHOT'
 }
+
+// newbay stuff
+dependencies.classpath group: 'com.newbay.gradle-plugins', name:'gradle-plugins-all', version: '1.0.69'

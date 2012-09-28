@@ -7,6 +7,9 @@ buildscript {
     apply from: file('gradle/buildscript.gradle'), to: buildscript 
 }
 
+// newbay stuff
+apply plugin: 'nb.core.all'
+
 allprojects {
     repositories { mavenCentral() }
 }
@@ -15,7 +18,8 @@ apply from: file('gradle/convention.gradle')
 apply from: file('gradle/maven.gradle')
 apply from: file('gradle/check.gradle')
 apply from: file('gradle/license.gradle')
-apply from: file('gradle/release.gradle')
+// newbay stuff
+//apply from: file('gradle/release.gradle')
 
 dependencies {
     compile 'joda-time:joda-time:1.6.2'
